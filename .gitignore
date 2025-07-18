@@ -37,3 +37,9 @@ nbdist/
 hs_err_pid*
 replay_pid*
 Source/target/AE2CGroceryStore-1.0-SNAPSHOT.war
+target/maven-archiver/pom.properties
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+target/Source-1.0-SNAPSHOT.war
+target/Source-1.0-SNAPSHOT/Tomcat.dpf
