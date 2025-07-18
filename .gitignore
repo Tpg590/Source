@@ -1,4 +1,4 @@
-/AE2CGroceryStore/target
+/Source/target
 /Database/database_store.sql
 
 ### NetBeans ###
@@ -36,4 +36,4 @@ nbdist/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-AE2CGroceryStore/target/AE2CGroceryStore-1.0-SNAPSHOT.war
+Source/target/AE2CGroceryStore-1.0-SNAPSHOT.war
