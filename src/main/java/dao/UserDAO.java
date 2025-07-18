@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.User;
 
 /**
  *
@@ -18,16 +19,29 @@ import java.util.logging.Logger;
  */
 public class UserDAO extends DBContext {
 
-    
-     public UserDAO login(String rollId, String password) {
+    public User getUserById(String rollId) {
+        try {
+            String query = "select userId,  name, gender from [user] where userId = ?";
+            Object[] params = {rollId};
+            ResultSet rs = execSelectQuery(query, params);
+            if (rs.next()) { // may cai rs nay mai mot phai co rs.next truoc moi lay dc.
+                return new User(rs.getString(1), rs.getString(2), rs.getInt(3));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    public User login(String userId, String password) {
         // Implement your work here
         try {
-            String query = "select roll_id, password, major_id\n"
-                    + "from student\n"
-                    + "where roll_id = ?\n"
+            String query = "select userId, password\n"
+                    + "from [user]\n"
+                    + "where userId = ?\n"
                     + "and password = ?\n";
 
-            Object[] params = {rollId, hashMd5(password)};
+            Object[] params = {userId, hashMd5(password)};
             ResultSet rs = execSelectQuery(query, params);
             return new User();
         } catch (SQLException ex) {
@@ -36,8 +50,7 @@ public class UserDAO extends DBContext {
         return null;
 
     }
-    
-    
+
     private String hashMd5(String raw) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -54,4 +67,5 @@ public class UserDAO extends DBContext {
             return "";
         }
     }
+
 }

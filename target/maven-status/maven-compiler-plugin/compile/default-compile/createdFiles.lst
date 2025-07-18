@@ -1,10 +1,14 @@
+controller\LoginServlet.class
+dbconnect\DBContext.class
+dao\CategoryDAO.class
+filter\AuthenticationFilter.class
 controller\CreateServlet.class
 controller\DeleteServlet.class
 model\Product.class
 model\Category.class
+controller\LogoutServlet.class
 controller\EditServlet.class
-dbconnect\DBContext.class
-dao\CategoryDAO.class
+dao\UserDAO.class
 dao\ProductDAO.class
-filter\AuthenticationFilter.class
 controller\HomeServlet.class
+model\User.class

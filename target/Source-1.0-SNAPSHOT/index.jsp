@@ -48,12 +48,30 @@
                             <td class="text-center">${product.category.catName}</td>
                             <td class="text-center">
                                 <a class="btn btn-success btn-sm me-1" href="${pageContext.request.contextPath}/home?view=edit&productID=${product.proId}">Edit</a>
-                              <a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/home?view=delete&productID=${product.proId}">Delete</a>
+                                <a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/home?view=delete&productID=${product.proId}">Delete</a>
                             </td>
                         </tr>
                     </c:forEach>
                 </tbody>
             </table>
+
+            <table class="table table-bordered w-75 mx-auto">
+                <thead class="table-light">
+                    <tr>
+                        <th class="text-center" style="width:20%;">ID</th>
+                        <th class="text-center" style="width:40%;">Name</th>
+                        <th class="text-center" style="width:40%;">Gender</th>
+                    </tr>
+                </thead>
+                <tbody>           
+                        <tr>
+                            <td class="text-center">${loggedUser.userId}</td>
+                            <td class="text-center">${loggedUser.name}</td>
+                            <td class="text-center">${loggedUser.gender}</td>                         
+                        </tr>                
+                </tbody>
+            </table>
+
         </div>
 
 

@@ -14,17 +14,17 @@
             <div class="d-flex justify-content-center align-content-center">
                 <h1 class="mt-2">Login</h1>
             </div>
-            <form class="form" method="post" action="${pageContext.request.contextPath}/edit">
+            <form class="form" method="post" action="${pageContext.request.contextPath}/login">
 
                 <!-- 1 Input type text -->
                 <div class="d-flex mt-3 mb-2 me-3">
                     <label class="text-nowrap mx-auto my-auto" for="username"> Username:</label>
-                    <input class="form-control ms-2 w-75" type="text" id="username" name="something"> <!-- have var name something and value something , w: width of input-->
+                    <input class="form-control ms-2 w-75" type="text" id="username" name="username"> <!-- have var name something and value something , w: width of input-->
                 </div>
 
                 <div class="d-flex mt-2 mb-2 me-3">
                     <label class="text-nowrap mx-auto my-auto" for="password"> Password:</label>
-                    <input class="form-control ms-2 w-75" type="password" id="password" name="something2"> <!-- have var name something and value something , w: width of input-->
+                    <input class="form-control ms-2 w-75" type="password" id="password" name="password"> <!-- have var name something and value something , w: width of input-->
                 </div>
 
                 <!--  Button Save and Cancel -->

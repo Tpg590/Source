@@ -5,6 +5,7 @@
 package controller;
 
 import dao.ProductDAO;
+import dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -22,6 +23,7 @@ public class HomeServlet extends HttpServlet {
 
     // khai bao DAO o day.
     private final ProductDAO productDao = new ProductDAO();
+
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
