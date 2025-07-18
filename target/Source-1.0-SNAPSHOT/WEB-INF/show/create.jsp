@@ -55,11 +55,12 @@
                 <div class="row ms-2 mb-3 me-2">
                     <label class="col-3 text-nowrap" for="something5">Category Name:</label>
                     <div class="col-9">
-                        <select name="cateName" id="something5" class="w-100">
+                        <select name="cateName" id="something5" class="w-100"> 
                             <c:forEach var="cate" items="${category}">
-                                <option value="${cate.catName}">${cate.catName}</option>
+                                <option value="${cate.catId}">${cate.catName}</option>        
                             </c:forEach>
                         </select>
+
                     </div>
                 </div>
 

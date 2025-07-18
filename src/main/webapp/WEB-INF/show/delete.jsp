@@ -19,31 +19,17 @@
         <div class=" form-w mx-auto shadow mt-5">   <!--  Can change w there to change width of form --> 
             <h1 class="ms-3 mt-2">Delete</h1>
             <form class="form" method="post" action="${pageContext.request.contextPath}/delete">
-                <!--  Button Save and Cancel -->
+          
                 <div class="mb-2 d-flex justify-content-center align-content-center">
                     <input type="hidden" name="productID" value="${productID}">
-                    <p>Do you want to delete this product?</p>
-                    <button type="submit" name="view" value="delete" class="btn btn-danger m-1">Delete</button>
-                    <a class="btn btn-danger m-1" href="${pageContext.request.contextPath}/home?view=home">Cancel</a>
+                     <p>Do you want to delete this product?</p>
+                     <button type="submit" name="view" value="delete" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-secondary">Cancel</button>
                 </div>
             </form>
         </div>
 
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
-
-        <!-- show list -->
+     
 
 
         <%@include file="../include/footer.jsp" %>

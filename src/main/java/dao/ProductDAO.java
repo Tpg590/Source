@@ -99,7 +99,7 @@ public class ProductDAO extends DBContext {
     public int create(String id, String prodName, int price, int quantity, String description, String cateId) {
         try {
             String query = "INSERT INTO [product] (pro_id, pro_name, pro_price, pro_quantity, pro_description, cat_id)\n"
-                    + "VALUES (?, ?, ?, ?, ?, ?)";
+                    + "SELECT ?,?,?,?,?,?";
             Object[] params = {id, prodName, price, quantity, description, cateId};
             return execQuery(query, params);
         } catch (SQLException ex) {
@@ -108,6 +108,13 @@ public class ProductDAO extends DBContext {
         return 0;
     }
 
+    /**
+     * Xóa product khỏi db.
+     *
+     * @param id là id của sản phẩm.
+     *
+     * @return 0 nều xóa thất bại, 1 nếu thành công.
+     */
     public int delete(int id) {
 
         try {

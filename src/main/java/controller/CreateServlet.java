@@ -90,16 +90,16 @@ public class CreateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
-        String prodId = request.getParameter("proId");
+        String prodId = request.getParameter("prodId");
         String prodName = request.getParameter("prodName");
         int price = Integer.parseInt(request.getParameter("price"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         String description = request.getParameter("description");
-        String cateName = request.getParameter("catename");
+        String cateName = request.getParameter("cateName");
 
         productDao.create(prodId, prodName, price, quantity, description, cateName);
-        
-         response.sendRedirect(request.getContextPath() + "/home");
+
+        response.sendRedirect(request.getContextPath() + "/home");
 
     }
 

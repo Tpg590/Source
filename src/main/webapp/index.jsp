@@ -48,7 +48,7 @@
                             <td class="text-center">${product.category.catName}</td>
                             <td class="text-center">
                                 <a class="btn btn-success btn-sm me-1" href="${pageContext.request.contextPath}/home?view=edit&productID=${product.proId}">Edit</a>
-                                <a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/home?view=delete">Delete</a>
+                              <a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/home?view=delete&productID=${product.proId}">Delete</a>
                             </td>
                         </tr>
                     </c:forEach>

@@ -80,14 +80,13 @@ public class HomeServlet extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/edit?productID=" + request.getParameter("productID"));
                     break;
                 case "delete":
-                    request.getRequestDispatcher("/WEB-INF/show/delete.jsp").forward(request, response);
+                     response.sendRedirect(request.getContextPath() + "/delete?productID=" + request.getParameter("productID"));               
                     break;
                 case "login":
-                    request.getRequestDispatcher("/WEB-INF/show/login.jsp").forward(request, response);
+                    response.sendRedirect(request.getContextPath() + "/login");
                     break;
                 case "logout":
-                    getDataIndex(request);
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    response.sendRedirect(request.getContextPath() + "/logout");
                     break;
                 default:
                     getDataIndex(request);
